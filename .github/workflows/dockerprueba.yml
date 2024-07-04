@@ -12,11 +12,4 @@ jobs:
       - name: Setup
         uses: actions/setup-node@v4
       - name: Run Docker Container
-        uses: tonys-code-base/run-container-action@v1.0.0
-        with:
-          # Docker registry address
-          # Image name
-          image: ubuntu
-          # Image tag
-          tag: latest
-          
+        run: docker run ubuntu bash -c "echo 'Hello, World!'"
